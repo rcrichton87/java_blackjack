@@ -22,5 +22,10 @@ public class CardTest{
     assertEquals("two", card1.getType());
   }
 
+  @Test
+  public void testCardHasSuit(){
+    assertEquals("Spades", card1.getSuit());
+  }
+
 
 }
