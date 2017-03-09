@@ -14,4 +14,8 @@ public class Spade implements Card {
     return value;
   }
 
+  public String getType(){
+    return type.toString().toLowerCase();
+  }
+
 }

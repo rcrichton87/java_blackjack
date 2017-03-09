@@ -17,5 +17,10 @@ public class CardTest{
     assertEquals(2, card1.getValue());
   }
 
+  @Test
+  public void testCardHasType(){
+    assertEquals("two", card1.getType());
+  }
+
 
 }
