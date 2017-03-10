@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import card_game.*;
+import java.util.*;
 
 public class DeckTest{
 
@@ -48,6 +49,15 @@ public class DeckTest{
     deck.addCard(card1);
     deck.addCard(card2);
     assertEquals(card1, deck.getCard(0));
+  }
+
+  @Test
+  public void testRemoveCard(){
+    deck.addCard(card1);
+    deck.addCard(card2);
+    deck.removeCard(1);
+    ArrayList<Card> cards = deck.getCards();
+    assertEquals(false, cards.contains(card2));
   }
   
 

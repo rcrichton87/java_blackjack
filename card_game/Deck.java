@@ -39,4 +39,12 @@ public class Deck{
     return cards.get(index);
   }
 
+  public void removeCard(int index){
+    cards.remove(index);
+  }
+
+  public ArrayList<Card> getCards(){
+    return cards;
+  }
+
 }
