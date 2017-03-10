@@ -20,9 +20,13 @@ public class Player{
     return drawnCards.size();
   }
 
-  // public String drawCard(Deck deck){
-  //   int randomNum = ThreadLocalRandom.current().nextInt(0, deck.getSize() + 1);
-  //   Card card = 
-  // }
+  public String drawCard(Deck deck){
+    Random rand = new Random(); 
+    int randomNumber = rand.nextInt(deck.getSize() + 1); 
+    Card card = deck.getCard(randomNumber);
+    drawnCards.add(card);
+    deck.removeCard(randomNumber);
+    return name + "drew a " + card.getType() + " of " + card.getSuit();
+  }
 
 }

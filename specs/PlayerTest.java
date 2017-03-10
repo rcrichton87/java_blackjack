@@ -24,12 +24,12 @@ public class PlayerTest{
     assertEquals(0, player.getNumberOfDrawnCards());
   }
 
-  // @Test
-  // public void testPlayerCanDrawCardFromDeck(){
-  //   player.drawCard(deck);
-  //   assertEquals(1, player.getNumberOfDrawnCards());
-  //   assertEquals(51, deck.getSize());
-  // }
+  @Test
+  public void testPlayerCanDrawCardFromDeck(){
+    player.drawCard(deck);
+    assertEquals(1, player.getNumberOfDrawnCards());
+    assertEquals(51, deck.getSize());
+  }
 
 
 
