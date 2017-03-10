@@ -1,8 +1,8 @@
 package card_game;
 
-public interface Game{
+public interface Game {
 
-  // void setup();
+  void setup();
 
   //void checkWin();
 

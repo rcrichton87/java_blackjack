@@ -1,6 +1,6 @@
 package card_game;
 
-public class BlackJack implements Game{
+public class BlackJack implements Game {
 
   Player dealer;
   Player player;
@@ -13,7 +13,7 @@ public class BlackJack implements Game{
     deck.freshDeck();
   }
 
-  public void Setup(){
+  public void setup(){
     player.drawCard(deck);
     player.drawCard(deck);
     dealer.drawCard(deck);

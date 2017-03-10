@@ -29,4 +29,12 @@ public class BlackJackTest{
     Deck deck = game.getDeck();
     assertEquals(52, deck.getSize());
   }
+
+  @Test
+  public void testDealerHas2CardsAfterSetup(){
+    game.setup();
+    Player dealer = game.getDealer();
+    assertEquals(2, dealer.getNumberOfDrawnCards());
+  }
+
 }
