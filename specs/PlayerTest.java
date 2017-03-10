@@ -16,4 +16,9 @@ public class PlayerTest{
     assertEquals("Ross", player.getName());
   }
 
+  @Test
+  public void testDrawnCardsStartsEmpty(){
+    assertEquals(0, player.getNumberOfDrawnCards());
+  }
+
 }

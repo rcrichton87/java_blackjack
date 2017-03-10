@@ -16,4 +16,8 @@ public class Player{
     return name;
   }
 
+  public int getNumberOfDrawnCards(){
+    return drawnCards.size();
+  }
+
 }
