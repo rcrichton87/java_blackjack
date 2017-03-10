@@ -1,4 +1,4 @@
-package cardGroup;
+package card_game;
 
 import java.util.*;
 import card.*;

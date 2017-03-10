@@ -1,7 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
-import card.*;
-import cardGroup.*;
+import card_game.*;
 
 public class DeckTest{
 
@@ -16,5 +15,7 @@ public class DeckTest{
   public void testDeckStartsEmpty(){
     assertEquals(0, deck.getSize());
   }
+
+  
 
 }

@@ -1,15 +1,15 @@
-package card;
+package card_game;
 
-public class Spade implements Card {
+public class Club implements Card {
 
   CardType type;
   int value;
   String suit;
 
-  public Spade(CardType type){
+  public Club(CardType type){
     this.type = type;
     this.value = type.getValue();
-    this.suit = "Spades";
+    this.suit = "Clubs";
   }
 
   public int getValue(){
