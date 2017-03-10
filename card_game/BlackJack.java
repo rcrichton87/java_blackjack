@@ -28,4 +28,8 @@ public class BlackJack implements Game{
     return player;
   }
 
+  public Deck getDeck(){
+    return deck;
+  }
+
  } 

@@ -23,4 +23,10 @@ public class BlackJackTest{
     Player player = game.getPlayer();
     assertEquals("Ross", player.getName());
   }
+
+  @Test
+  public void testGameHas52CardDeck(){
+    Deck deck = game.getDeck();
+    assertEquals(52, deck.getSize());
+  }
 }
