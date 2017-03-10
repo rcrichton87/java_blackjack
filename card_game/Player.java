@@ -22,10 +22,18 @@ public class Player{
 
   public void drawCard(Deck deck){
     Random rand = new Random(); 
-    int randomNumber = rand.nextInt(deck.getSize() + 1);
+    int randomNumber = rand.nextInt(deck.getSize());
     Card card = deck.getCard(randomNumber);
     drawnCards.add(card);
     deck.removeCard(randomNumber);
+  }
+
+  public int cardsTotalValue(){
+    int total = 0;
+    for (Card card : drawnCards){
+      total += card.getValue();
+    }
+    return total;
   }
 
 

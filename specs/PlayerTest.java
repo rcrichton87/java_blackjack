@@ -32,8 +32,34 @@ public class PlayerTest{
   }
 
   @Test
+  public void testPlayerCanDrawFromSingleCardDeck(){
+    deck = new Deck();
+    Card card1 = new Spade(CardType.TWO);
+    deck.addCard(card1);
+    player.drawCard(deck);
+    assertEquals(0, deck.getSize());
+  }
+
+  @Test
+  public void testPlayerCanDrawAllCards(){
+    int count = 0;
+    while (count < 52 ) {
+      player.drawCard(deck);
+      count++;
+    }
+    assertEquals(52, player.getNumberOfDrawnCards());
+  }
+
+  @Test
   public void testPlayerCanTotalDrawnCardValues(){
-    
+    deck = new Deck();
+    Card card1 = new Spade(CardType.TWO);
+    Card card2 = new Heart(CardType.ACE);
+    deck.addCard(card1);
+    deck.addCard(card2);
+    player.drawCard(deck);
+    player.drawCard(deck);
+    assertEquals(13, player.cardsTotalValue());
   }
 
 
