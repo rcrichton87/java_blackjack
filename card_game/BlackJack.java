@@ -24,4 +24,8 @@ public class BlackJack implements Game{
     return dealer;
   }
 
+  public Player getPlayer(){
+    return player;
+  }
+
  } 

@@ -17,4 +17,10 @@ public class BlackJackTest{
     Player dealer = game.getDealer();
     assertEquals("Dealer", dealer.getName());
   }
+
+  @Test
+  public void testGameHasPlayer(){
+    Player player = game.getPlayer();
+    assertEquals("Ross", player.getName());
+  }
 }
