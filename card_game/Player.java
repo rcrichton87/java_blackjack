@@ -20,4 +20,9 @@ public class Player{
     return drawnCards.size();
   }
 
+  // public String drawCard(Deck deck){
+  //   int randomNum = ThreadLocalRandom.current().nextInt(0, deck.getSize() + 1);
+  //   Card card = 
+  // }
+
 }

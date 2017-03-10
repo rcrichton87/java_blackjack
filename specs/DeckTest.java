@@ -43,6 +43,12 @@ public class DeckTest{
     assertEquals(52, deck.getSize());
   }
 
+  @Test 
+  public void testGetCard(){
+    deck.addCard(card1);
+    deck.addCard(card2);
+    assertEquals(card1, deck.getCard(0));
+  }
   
 
 }
