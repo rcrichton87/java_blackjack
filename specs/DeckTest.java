@@ -30,6 +30,13 @@ public class DeckTest{
     assertEquals(1, deck.getSize());
   }
 
+  @Test
+  public void testMultipleSuitsInDeck(){
+    deck.addCard(card1);
+    deck.addCard(card2);
+    assertEquals(2, deck.getSize());
+  }
+
   
 
 }
