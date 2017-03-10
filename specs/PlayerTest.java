@@ -31,6 +31,11 @@ public class PlayerTest{
     assertEquals(51, deck.getSize());
   }
 
+  @Test
+  public void testPlayerCanTotalDrawnCardValues(){
+    
+  }
+
 
 
 }

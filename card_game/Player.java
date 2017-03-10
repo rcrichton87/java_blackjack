@@ -20,13 +20,14 @@ public class Player{
     return drawnCards.size();
   }
 
-  public String drawCard(Deck deck){
+  public void drawCard(Deck deck){
     Random rand = new Random(); 
-    int randomNumber = rand.nextInt(deck.getSize() + 1); 
+    int randomNumber = rand.nextInt(deck.getSize() + 1);
     Card card = deck.getCard(randomNumber);
     drawnCards.add(card);
     deck.removeCard(randomNumber);
-    return name + "drew a " + card.getType() + " of " + card.getSuit();
   }
+
+
 
 }
