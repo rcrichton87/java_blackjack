@@ -1,9 +1,8 @@
 package card_game;
 
 import java.util.*;
-import card.*;
 
-public class Deck implements CardGroup{
+public class Deck{
 
   ArrayList<Card> cards;
 
@@ -13,6 +12,10 @@ public class Deck implements CardGroup{
 
   public int getSize(){
     return cards.size();
+  }
+
+  public void addCard(Card card){
+    cards.add(card);
   }
 
 }

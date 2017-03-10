@@ -35,7 +35,7 @@ public class CardTest{
 
   @Test
   public void testAceHasValue(){
-    assertEquals(14, card2.getValue());
+    assertEquals(11, card2.getValue());
   }
 
   @Test
