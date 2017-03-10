@@ -37,6 +37,12 @@ public class DeckTest{
     assertEquals(2, deck.getSize());
   }
 
+  @Test
+  public void testCreateFullDeck(){
+    deck.freshDeck();
+    assertEquals(52, deck.getSize());
+  }
+
   
 
 }

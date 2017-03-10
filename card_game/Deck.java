@@ -18,4 +18,21 @@ public class Deck{
     cards.add(card);
   }
 
+  public void freshDeck(){
+    Card heart;
+    Card diamond;
+    Card spade;
+    Card club;
+    for (CardType cardType : CardType.values()){
+      heart = new Heart(cardType);
+      diamond = new Diamond(cardType);
+      spade = new Spade(cardType);
+      club = new Club(cardType);
+      cards.add(heart);
+      cards.add(diamond);
+      cards.add(spade);
+      cards.add(club);
+    }
+  }
+
 }
