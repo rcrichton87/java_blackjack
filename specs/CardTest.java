@@ -54,5 +54,11 @@ public class CardTest{
     assertEquals(1, card2.getValue());
   }
 
+  @Test
+  public void testCannotChangeNonAce(){
+    card3.setAceValueToOne();
+    assertEquals(10, card3.getValue());
+  }
+
 
 }
