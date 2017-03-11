@@ -36,6 +36,16 @@ public class BlackJack implements Game {
     player.drawCard(deck);
   }
 
+  public Player getWinner(){
+    if (player.cardsTotalValue() > dealer.cardsTotalValue()){
+      return player;
+    }
+    else if ((dealer.cardsTotalValue() > player.cardsTotalValue())){
+      return dealer;
+    }
+    else {
+      return null;
+    }
+  }
 
-
- } 
+}

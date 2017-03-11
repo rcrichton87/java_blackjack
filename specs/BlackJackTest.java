@@ -45,7 +45,7 @@ public class BlackJackTest{
   }
 
   @Test
-  public void playerCanTakeTurn(){
+  public void testPlayerCanTakeTurn(){
     Deck deck = game.getDeck();
     Card card1 = new Spade(CardType.TWO);
     Card card2 = new Heart(CardType.TWO);
@@ -61,6 +61,25 @@ public class BlackJackTest{
     deck.addCard(card5);
     game.takeTurn(game.getPlayer());  //player draws a 5
     assertEquals(9, game.getPlayer().cardsTotalValue());
+  }
+
+  @Test
+  public void testHighestTotalWins(){
+    Deck deck = game.getDeck();
+    Card card1 = new Spade(CardType.TWO);
+    Card card2 = new Heart(CardType.TWO);
+    Card card3 = new Club(CardType.TWO);
+    Card card4 = new Diamond(CardType.TWO);
+    Card card5 = new Spade(CardType.FIVE);
+    deck.getCards().clear();
+    deck.addCard(card1);
+    deck.addCard(card2);
+    deck.addCard(card3);
+    deck.addCard(card4);  
+    game.setup();  
+    deck.addCard(card5);
+    game.takeTurn(game.getPlayer());  
+    assertEquals(game.getPlayer(), game.getWinner());
   }
 
 
