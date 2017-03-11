@@ -62,6 +62,35 @@ public class PlayerTest{
     assertEquals(13, player.cardsTotalValue());
   }
 
+  @Test
+  public void playerCanSetAcesValueToOne(){
+    deck = new Deck();
+    Card card1 = new Spade(CardType.TWO);
+    Card card2 = new Heart(CardType.ACE);
+    deck.addCard(card1);
+    deck.addCard(card2);
+    player.drawCard(deck);
+    player.drawCard(deck);
+    player.setAceValueToOne();
+    assertEquals(3, player.cardsTotalValue());
+  }
+
+  @Test
+  public void playerOnlyChangesOneAce(){
+    deck = new Deck();
+    Card card1 = new Spade(CardType.TWO);
+    Card card2 = new Heart(CardType.ACE);
+    Card card3 = new Spade(CardType.ACE);
+    deck.addCard(card1);
+    deck.addCard(card2);
+    deck.addCard(card3);
+    player.drawCard(deck);
+    player.drawCard(deck);
+    player.drawCard(deck);
+    player.setAceValueToOne();
+    assertEquals(14, player.cardsTotalValue());
+  }
+
 
 
 }

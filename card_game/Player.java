@@ -36,7 +36,14 @@ public class Player{
     return total;
   }
 
-  
+  public void setAceValueToOne(){
+    for (Card card : drawnCards){
+      card.setAceValueToOne();
+      if (card.getValue() == 1){
+        return;
+      }
+    }
+  }
 
 
 
