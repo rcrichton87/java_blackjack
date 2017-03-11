@@ -32,7 +32,7 @@ public class BlackJack implements Game {
     return deck;
   }
 
-  public void playerTakeTurn(){
+  public void takeTurn(Player player){
     player.drawCard(deck);
   }
 

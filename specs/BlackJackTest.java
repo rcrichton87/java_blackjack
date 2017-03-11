@@ -59,8 +59,9 @@ public class BlackJackTest{
     deck.addCard(card4);  //clear the deck and fill it with 2s
     game.setup();  //each player has 2 2s, for a total of 4
     deck.addCard(card5);
-    game.playerTakeTurn();  //player draws a 5
+    game.takeTurn(game.getPlayer());  //player draws a 5
     assertEquals(9, game.getPlayer().cardsTotalValue());
   }
+
 
 }
