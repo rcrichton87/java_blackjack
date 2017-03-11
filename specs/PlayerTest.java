@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import card_game.*;
+import java.util.*;
 
 public class PlayerTest{
 
@@ -89,6 +90,17 @@ public class PlayerTest{
     player.drawCard(deck);
     player.setAceValueToOne();
     assertEquals(14, player.cardsTotalValue());
+  }
+
+  @Test
+  public void testCanGetArrayListOfDrawnCards(){
+    deck = new Deck();
+    Card card1 = new Spade(CardType.TWO);
+    deck.addCard(card1);
+    player.drawCard(deck);
+    ArrayList<Card> expected = new ArrayList<Card>();
+    expected.add(card1);
+    assertEquals(expected, player.getDrawnCards());
   }
 
 

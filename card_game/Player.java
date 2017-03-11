@@ -45,6 +45,10 @@ public class Player{
     }
   }
 
+  public ArrayList<Card> getDrawnCards(){
+    return drawnCards;
+  }
+
 
 
 }
