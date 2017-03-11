@@ -32,6 +32,10 @@ public class BlackJack implements Game {
     return deck;
   }
 
-  
+  public void playerTakeTurn(){
+    player.drawCard(deck);
+  }
+
+
 
  } 

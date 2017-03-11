@@ -44,6 +44,23 @@ public class BlackJackTest{
     assertEquals(2, player.getNumberOfDrawnCards());
   }
 
-  
+  @Test
+  public void playerCanTakeTurn(){
+    Deck deck = game.getDeck();
+    Card card1 = new Spade(CardType.TWO);
+    Card card2 = new Heart(CardType.TWO);
+    Card card3 = new Club(CardType.TWO);
+    Card card4 = new Diamond(CardType.TWO);
+    Card card5 = new Spade(CardType.FIVE);
+    deck.getCards().clear();
+    deck.addCard(card1);
+    deck.addCard(card2);
+    deck.addCard(card3);
+    deck.addCard(card4);  //clear the deck and fill it with 2s
+    game.setup();  //each player has 2 2s, for a total of 4
+    deck.addCard(card5);
+    game.playerTakeTurn();  //player draws a 5
+    assertEquals(9, game.getPlayer().cardsTotalValue());
+  }
 
 }
