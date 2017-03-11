@@ -24,4 +24,10 @@ public class Club implements Card {
     return suit;
   }
 
+  public void setAceValueToOne(){
+    if (value == 11){
+      value = 1;
+    }
+  }
+
 }

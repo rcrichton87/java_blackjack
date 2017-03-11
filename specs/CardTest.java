@@ -48,5 +48,11 @@ public class CardTest{
     assertEquals("Diamonds", card4.getSuit());
   }
 
+  @Test
+  public void testSetAceToOne(){
+    card2.setAceValueToOne();
+    assertEquals(1, card2.getValue());
+  }
+
 
 }

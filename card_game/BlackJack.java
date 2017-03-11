@@ -48,4 +48,13 @@ public class BlackJack implements Game {
     }
   }
 
+  public boolean totalAbove16(Player player){
+    if (player.cardsTotalValue() > 16){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
 }

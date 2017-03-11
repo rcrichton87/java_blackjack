@@ -8,4 +8,6 @@ public interface Card {
 
   String getSuit();
 
+  void setAceValueToOne();
+
 }
