@@ -13,9 +13,6 @@ public class BlackJackRunner{
 
     boolean gameOver = false;
 
-    boolean playerFinished = false;
-    boolean dealerFinished = false;
-
     Player player = game.getPlayer();
     Player dealer = game.getDealer();
 
@@ -43,7 +40,6 @@ public class BlackJackRunner{
       }
       else {
         System.out.println("Stick!");
-        playerFinished = true;
       }
       System.out.println("Total: " + player.cardsTotalValue());
 
@@ -69,12 +65,11 @@ public class BlackJackRunner{
       }
       else {
         System.out.println("Stick!");
-        dealerFinished = true;
       }
       
       System.out.println("Total: " + dealer.cardsTotalValue());
 
-      if (playerFinished == true && dealerFinished == true){
+      if (game.totalAbove16(player) == true && game.totalAbove16(player) == true){
         gameOver = true;
       }
 
