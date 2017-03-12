@@ -71,6 +71,7 @@ public class BlackJackRunner{
         System.out.println("Stick!");
         dealerFinished = true;
       }
+      
       System.out.println("Total: " + dealer.cardsTotalValue());
 
       if (playerFinished == true && dealerFinished == true){
