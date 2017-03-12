@@ -21,11 +21,9 @@ public class Player{
   }
 
   public void drawCard(Deck deck){
-    Random rand = new Random(); 
-    int randomNumber = rand.nextInt(deck.getSize());
-    Card card = deck.getCard(randomNumber);
+    Card card = deck.getCard(0);
     drawnCards.add(card);
-    deck.removeCard(randomNumber);
+    deck.removeCard(0);
   }
 
   public int cardsTotalValue(){

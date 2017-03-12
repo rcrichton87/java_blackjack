@@ -2,6 +2,7 @@ package card_game;
 
 import java.util.*;
 
+
 public class Deck{
 
   ArrayList<Card> cards;
@@ -32,6 +33,7 @@ public class Deck{
       cards.add(diamond);
       cards.add(spade);
       cards.add(club);
+      Collections.shuffle(cards);
     }
   }
 
