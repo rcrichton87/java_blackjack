@@ -22,6 +22,7 @@ public class BlackJackRunner{
     while (gameOver == false) {
 
       
+
       ArrayList<Card> playerDrawnCards = player.getDrawnCards();
       System.out.println(player.getName() + " has:");
       for (Card card : playerDrawnCards) {
@@ -36,14 +37,17 @@ public class BlackJackRunner{
           player.setAceValueToOne();
         }
         if (player.cardsTotalValue() > 21){
-          System.out.println("Bust! Total: " + player.cardsTotalValue());
+          System.out.println("Bust!");
           gameOver = true;
         }
       }
       else {
-        System.out.println("Stick! Total: " + player.cardsTotalValue());
+        System.out.println("Stick!");
         playerFinished = true;
       }
+      System.out.println("Total: " + player.cardsTotalValue());
+
+
 
       ArrayList<Card> dealerDrawnCards = dealer.getDrawnCards();
       System.out.println(dealer.getName() + " has:");
@@ -59,18 +63,21 @@ public class BlackJackRunner{
           dealer.setAceValueToOne();
         }
         if (dealer.cardsTotalValue() > 21){
-          System.out.println("Bust! Total: " + dealer.cardsTotalValue());
+          System.out.println("Bust!");
           gameOver = true;
         }
       }
       else {
-        System.out.println("Stick! Total: " + dealer.cardsTotalValue());
+        System.out.println("Stick!");
         dealerFinished = true;
       }
+      System.out.println("Total: " + dealer.cardsTotalValue());
 
       if (playerFinished == true && dealerFinished == true){
         gameOver = true;
       }
+
+
 
     }
 
