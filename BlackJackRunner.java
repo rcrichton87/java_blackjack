@@ -72,10 +72,7 @@ public class BlackJackRunner{
 
       if (game.totalAbove16(player) == true && game.totalAbove16(dealer) == true){
         gameOver = true;
-
       }
-
-
 
     }
 
