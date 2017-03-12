@@ -19,10 +19,10 @@ public class Deck{
   }
 
   public void freshDeck(){
-    Card heart;
-    Card diamond;
-    Card spade;
-    Card club;
+    Heart heart;  //these were Cards, rather than the individual suits, passed all tests but didn't work in the runner
+    Diamond diamond; //Exception in thread "main" java.lang.NoClassDefFoundError: card_game/CardType (wrong name: card/CardType) - problem with the Deck's freshDeck() method
+    Spade spade; //Is this beacuse there's no setup method in Card, since it's an interface?
+    Club club;
     for (CardType cardType : CardType.values()){
       heart = new Heart(cardType);
       diamond = new Diamond(cardType);
