@@ -43,7 +43,9 @@ public class BlackJackRunner{
       }
       System.out.println("Total: " + player.cardsTotalValue());
 
-
+      if(gameOver == true){
+        break;
+      }
 
       ArrayList<Card> dealerDrawnCards = dealer.getDrawnCards();
       System.out.println(dealer.getName() + " has:");
@@ -66,7 +68,6 @@ public class BlackJackRunner{
       else {
         System.out.println("Stick!");
       }
-      
       System.out.println("Total: " + dealer.cardsTotalValue());
 
       if (game.totalAbove16(player) == true && game.totalAbove16(player) == true){
