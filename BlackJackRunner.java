@@ -70,30 +70,20 @@ public class BlackJackRunner{
       }
       System.out.println("Total: " + dealer.cardsTotalValue());
 
-      if (game.totalAbove16(player) == true && game.totalAbove16(player) == true){
+      if (game.totalAbove16(player) == true && game.totalAbove16(dealer) == true){
         gameOver = true;
+
       }
 
 
 
     }
 
-    Player winner = null;
-    if (player.cardsTotalValue() > 21) {
-      winner = game.getDealer();
-    }
-    else if (dealer.cardsTotalValue() > 21) {
-      winner = game.getPlayer();
-    }
-    else if (game.getWinner() != null) {
-      winner = game.getWinner();
-    }
-
-    if (winner == null) {
+    if (game.getWinner() == null) {
       System.out.println("Draw!");
     }
     else {
-      System.out.println(winner.getName() + " wins with total " + winner.cardsTotalValue());
+      System.out.println(game.getWinner().getName() + " wins with total " + game.getWinner().cardsTotalValue());
     }
 
   }

@@ -98,5 +98,17 @@ public class BlackJackTest{
     assertEquals(true, game.totalAbove16(game.getDealer()));
   }
 
+  @Test
+  public void testGetWinner(){
+    Deck deck = game.getDeck();
+    Card card1 = new Spade(CardType.KING);
+    Card card2 = new Spade(CardType.TWO);
+    deck.addCard(card1);
+    game.getPlayer().drawCard(deck);
+    deck.addCard(card2);
+    game.getDealer().drawCard(deck);
+    assertEquals(game.getPlayer(), game.getWinner());
+  }
+
 
 }
